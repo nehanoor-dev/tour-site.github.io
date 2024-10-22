@@ -1,0 +1,8 @@
+.cover {
+    background-image: url('./../../assets/images/cover.png');
+    background-position: center;
+    height: 40vh;
+    border-radius: 20px;
+    margin: 20px;
+    overflow-x: hidden !important;
+}

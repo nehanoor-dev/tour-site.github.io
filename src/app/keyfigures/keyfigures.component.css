@@ -1,0 +1,17 @@
+.keyfigures-section{
+    height: 400px;
+    background: #347A79;
+}
+@media (max-width: 700px) {  
+    .keyfigures-section{
+        height: 100vh;
+    }  
+}
+.custom-card {
+    background-color: transparent; 
+    border: 1px solid #48A4A3;
+    color: white; 
+    box-shadow: none; 
+    border-radius: 20px;
+  }
+  

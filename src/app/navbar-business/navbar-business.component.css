@@ -1,0 +1,72 @@
+/* Styling for the navbar */
+
+.navbar {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #347A79;    ;
+    padding: 1rem;
+    color: white;
+  }
+  .navbar-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar-logo img {
+    height: 40px;
+  }
+
+  .navbar-logo a {
+    color: #FFFFFE;
+    text-decoration: none;
+    margin-left: 3rem;
+    font-size: 1rem;
+  }
+  
+  .navbar-logo  a:hover {
+    color: #ccc;
+  }
+  
+.btn-yellow {
+  background: #FFCE34;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid #FFCE34;
+  padding: 10px 20px;
+  margin: 5px;
+}
+.btn-yellow:hover {
+  opacity: 0.7;
+  transition: 0.4s;
+}
+.btn-yellow-light {
+  background: transparent;
+  border: 1px solid #FFCE34;
+  color: #FFCE34;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 5px;
+
+}
+.btn-yellow-light:hover {
+opacity: 0.7;
+transition: 0.4s;
+}
+.nav-link-custom.active {
+  color: #E2074c !important;
+}
+.custom-btn-toggle {
+  background-color: transparent; 
+  color: white;            
+  border: none;            
+  border-radius: 50% !important;      
+  padding: 10px 15px;      
+  transition: background-color 0.3s; 
+}
+
+.custom-btn-toggle:hover {
+  color: rgb(210, 201, 107);               
+}

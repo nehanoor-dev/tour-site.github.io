@@ -1,0 +1,101 @@
+<div id="contact">
+<div class="contact-section  py-5 d-flex flex-column align-items-center justify-content-center">
+  <!-- Heading and Subtext -->
+  <div class="text-center mb-5 container">
+    <h2 class="text-white margin-top">Rejoignez-nous pour façonner<br>
+      le futur du loisir !
+    </h2>
+    <p class="text-white margin-top">
+      Vous souhaitez en savoir plus sur nos solutions ? Remplissez le formulaire ci-<br>dessous et l'un de nos experts vous contactera dans les plus<br> brefs délais pour discuter de vos besoins.
+    </p>
+  </div>
+
+  <!-- Contact Form -->
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-form w-35 border padding-all">
+    <!-- First Row: Name and Email -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input
+          type="text"
+          name="name"
+          ngModel
+          required
+          class="form-control form-control-lg border-white text-white bg-transparent border custom-placeholder"
+          placeholder="Brian Clark"
+        />
+        <div *ngIf="contactForm.controls['name']?.invalid && (contactForm.controls['name']?.touched || contactForm.submitted)" class="text-danger">
+          Le nom est requis.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <input
+          type="email"
+          name="email"
+          ngModel
+          required
+          email
+          class="form-control form-control-lg border-white text-white bg-transparent border custom-placeholder"
+          placeholder="example@youremail.com"
+        />
+        <div *ngIf="contactForm.controls['email']?.invalid && (contactForm.controls['email']?.touched || contactForm.submitted)" class="text-danger">
+          Veuillez entrer une adresse e-mail valide.
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row: Phone and Subject -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input
+          type="text"
+          name="phone"
+          ngModel
+          required
+          class="form-control form-control-lg border-white text-white bg-transparent border custom-placeholder"
+          placeholder="(123) 456-789"
+        />
+        <div *ngIf="contactForm.controls['phone']?.invalid && (contactForm.controls['phone']?.touched || contactForm.submitted)" class="text-danger">
+          Le téléphone est requis.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <input
+          type="text"
+          name="subject"
+          ngModel
+          required
+          class="form-control form-control-lg border-white text-white bg-transparent border custom-placeholder"
+          placeholder="BRIX Agency"
+        />
+        <div *ngIf="contactForm.controls['subject']?.invalid && (contactForm.controls['subject']?.touched || contactForm.submitted)" class="text-danger">
+          Le sujet est requis.
+        </div>
+      </div>
+    </div>
+
+    <!-- Message Area -->
+    <div class="row mb-3">
+      <div class="col-12">
+        <textarea
+          name="message"
+          ngModel
+          required
+          class="form-control form-control-lg border-white text-white bg-transparent border custom-placeholder"
+          rows="5"
+          placeholder="Commencez à écrire votre message..."
+        ></textarea>
+        <div *ngIf="contactForm.controls['message']?.invalid && (contactForm.controls['message']?.touched || contactForm.submitted)" class="text-danger">
+          Le message est requis.
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+      <button type="submit" class="pink-btn d-flex align-items-center cursor-pointer" [disabled]="!contactForm.form.valid">Envoyer un message
+        <mat-icon class="ml-2 mt-1">arrow_forward</mat-icon>
+      </button>
+    </div>
+  </form>
+</div>
+</div>

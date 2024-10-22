@@ -1,0 +1,33 @@
+<div class="faq-section d-flex justify-content-center align-items-center">
+  <div class="faqs-inner">
+    <h3 class="text-center margin-top blue-text fw-bold">
+      Tu as des questions ? Nous avons des réponses !
+    </h3>
+    <p class="text-center blue-text text-small">
+      N’hesites pas à nous contacter si tu as d’autre question
+    </p>
+    <div class="padding-top margin-top">
+      <div class="faq" *ngFor="let faq of faqs; let i = index">
+        <div
+          class="faq-question d-flex justify-content-between align-items-center"
+          (click)="toggleFaq(i)"
+        >
+          <h6 class="fw-bold blue-text">
+            <span style="color: #48a4a3">0{{ faq.number }} - </span>
+            {{ faq.question }}
+          </h6>
+          <span>
+            <mat-icon *ngIf="!faq.open" style="color: #48a4a3">add</mat-icon>
+            <mat-icon *ngIf="faq.open" style="color: #48a4a3">remove</mat-icon>
+          </span>
+        </div>
+
+        <div class="faq-answer blue-text text-small" *ngIf="faq.open">
+          <p>{{ faq.answer }}</p>
+        </div>
+
+        <hr />
+      </div>
+    </div>
+  </div>
+</div>

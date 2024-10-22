@@ -1,0 +1,88 @@
+<div id="explorer">
+<div
+  class="details mt-10 d-flex flex-column align-items-center justify-content-center vh-120 padding"
+>
+  <div class="text-center">
+    <h2 class="blue-text fw-bold custom">Dans les détails</h2>
+    <p class="blue-text">
+      Seul, avec tes amis, ta moitié, ta famille... WeWiins pourra<br />
+      répondre à tes attentes en 4 étapes :
+    </p>
+  </div>
+  <div class="tabs mt-10 mb-10 d-flex flex-wrap justify-content-center">
+    <button
+      class="custom-btn btn-custom-primary me-2 fw-bold d-flex align-items-center mt-2"
+      [class.active]="selectedTab === 0"
+      (click)="selectTab(0)"
+    >
+      <mat-icon class="small-icon mt-1">explore</mat-icon>
+      Explore
+    </button>
+    <button
+      class="custom-btn btn-custom-primary me-2 fw-bold d-flex align-items-center mt-2"
+      [class.active]="selectedTab === 1"
+      (click)="selectTab(1)"
+    >
+      <mat-icon>calendar_today</mat-icon>
+      Planifie
+    </button>
+    <button
+      class="custom-btn btn-custom-primary me-2 fw-bold d-flex align-items-center mt-2"
+      [class.active]="selectedTab === 2"
+      (click)="selectTab(2)"
+    >
+      <mat-icon>trending_up</mat-icon>
+      Profite
+    </button>
+    <button
+      class="custom-btn btn-custom-primary fw-bold d-flex align-items-center mt-2"
+      [class.active]="selectedTab === 3"
+      (click)="selectTab(3)"
+    >
+      <mat-icon>celebration</mat-icon>
+      célébrer
+    </button>
+  </div>
+  
+
+  <div class="tab-content mt-3 text-center padding">
+    <div *ngIf="selectedTab === 0" class="container pa-10">
+      <img src="./../../assets/images/tab1.png" width="390vh" height="290vh" />
+      <h3 class="blue-text fw-bold me-3 ma-5">
+        Découvre une multitude d'activités près de chez toi<br />
+        ou à l'autre bout de la France.
+      </h3>
+      <p class="blue-text ma-5">
+        Cinema, laser game, ateliers créatifs, culinaires...<br />
+        Il y en a pour tous les goûts !
+      </p>
+    </div>
+    <div *ngIf="selectedTab === 1">
+      <img src="./../../assets/images/tab2.png" width="390vh" height="280vh" />
+      <h3 class="blue-text fw-bold ma-5">
+        Crée des sondages<br /> personnalisés pour trouver<br />
+        l'activité qui plaît à tout le<br /> monde (oui c’est
+        possible)
+      </h3>
+      <p class="blue-text ma-5">
+        Puis, réservez ensemble vos billets<br> en quelques clics et synchronisez
+        vos<br> calendriers
+        pour ne rien manquer.
+      </p>
+    </div>
+    <div *ngIf="selectedTab === 2">
+      <img src="./../../assets/images/tab3.png" width="390vh" height="290vh" />
+      <h3 class="blue-text fw-bold ma-5">
+        Amuse-toi et laisse-toi porter<br /> par le moment
+        présent en bonne<br /> compagnie, avec les bonnes
+        activités
+      </h3>
+    </div>
+    <div *ngIf="selectedTab === 3">
+      <img src="./../../assets/images/tab4.png" width="390vh" height="290vh" />
+      <p class="blue-text">Large choix d’activité + Organisation simplifié</p>
+      <h3 class="blue-text fw-bold">= Souvenirs garantis !</h3>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,21 @@
+.activities {
+    overflow-x: hidden !important;
+}
+.nav-icon {
+    background-color: #48a4a3;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+.card-custom {
+    height: 300px;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.nav-icon:hover {
+    background-color: #FFCE34;
+}
+.margin-cust {
+    margin-top: 200px;
+}

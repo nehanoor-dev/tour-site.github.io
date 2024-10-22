@@ -1,0 +1,110 @@
+<div class="activities container mt-5">
+  <!-- Top section with heading and text -->
+  <div class="mb-4">
+    <h2 class="fw-bold blue-text">
+      De nombreuses activités<br />
+      vous attendent
+    </h2>
+    <p class="blue-text fw-light">Laser game, atelier de cuisine, karting...</p>
+  </div>
+
+  <!-- Navigation Icons -->
+  <div class="position-relative mb-4">
+    <mat-icon
+      (click)="previousActivity()"
+      class="nav-icon position-absolute start-0 translate-middle-y"
+      >chevron_left</mat-icon
+    >
+    <mat-icon
+      (click)="nextActivity()"
+      class="nav-icon position-absolute end-0 translate-middle-y"
+      >chevron_right</mat-icon
+    >
+  </div>
+
+  <!-- Row with the current activity -->
+  <div class="row" *ngIf="activities.length">
+    <ng-container *ngIf="currentIndex % 2 === 0; else oddLayout">
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div class="card card-custom">
+          <div class="card-body">
+            <button class="pink-btn">
+              {{ activities[currentIndex].buttonText }}
+            </button>
+            <h2 class="card-title blue-text fw-bold">
+              {{ activities[currentIndex].title }}
+            </h2>
+            <div class="row d-flex justify-content-between">
+              <div
+                class="col-4 d-flex justify-content-center align-items-center"
+              >
+                <img
+                  src="./../../assets/images/enterprise.png"
+                  class="img-fluid"
+                  alt="Enterprise Image"
+                />
+              </div>
+              <div class="col-8">
+                <p class="margin-top blue-text">
+                  {{ activities[currentIndex].company }}
+                </p>
+                <p class="blue-text">{{ activities[currentIndex].location }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <img
+          [src]="activities[currentIndex].image"
+          height="400"
+          width="400"
+          class="img-fluid"
+          alt="Sample Image"
+        />
+      </div>
+    </ng-container>
+
+    <!-- Template for odd layout -->
+    <ng-template #oddLayout>
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <img
+          [src]="activities[currentIndex].image"
+          height="400"
+          width="400"
+          class="img-fluid"
+          alt="Sample Image"
+        />
+      </div>
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div class="card card-custom">
+          <div class="card-body">
+            <button class="pink-btn">
+              {{ activities[currentIndex].buttonText }}
+            </button>
+            <h2 class="card-title blue-text fw-bold">
+              {{ activities[currentIndex].title }}
+            </h2>
+            <div class="row d-flex justify-content-between">
+              <div
+                class="col-4 d-flex justify-content-center align-items-center"
+              >
+                <img
+                  src="./../../assets/images/enterprise.png"
+                  class="img-fluid"
+                  alt="Enterprise Image"
+                />
+              </div>
+              <div class="col-8">
+                <p class="margin-top blue-text">
+                  {{ activities[currentIndex].company }}
+                </p>
+                <p class="blue-text">{{ activities[currentIndex].location }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+{
+  "faqs": [
+    {
+      "number": 1,
+      "question": "Pour le moment WeWiins est en version Béta ?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur cdolor col adipiscing elit. Integer mattis nunc augue vel lacinia erat euismod ut. Sed eleifend tellus nonole tincidunt aliquet. Fusce aliquam mi felis."
+    },
+    {
+      "number": 2,
+      "question": "WeWiins est gratuit ?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur cdolor col adipiscing elit. Integer mattis nunc augue vel lacinia erat euismod ut. Sed eleifend tellus nonole tincidunt aliquet. Fusce aliquam mi felis."
+    },
+    {
+      "number": 3,
+      "question": "WeWiins fait quoi avec les données de ses utilisateurs ?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur cdolor col adipiscing elit. Integer mattis nunc augue vel lacinia erat euismod ut. Sed eleifend tellus nonole tincidunt aliquet. Fusce aliquam mi felis."
+    },
+    {
+      "number": 4,
+      "question": "Quel type d’activité je vais retrouver sur WeWiins ?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur cdolor col adipiscing elit. Integer mattis nunc augue vel lacinia erat euismod ut. Sed eleifend tellus nonole tincidunt aliquet. Fusce aliquam mi felis."
+    },
+    {
+      "number": 5,
+      "question": "What is your web design process?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur cdolor col adipiscing elit. Integer mattis nunc augue vel lacinia erat euismod ut. Sed eleifend tellus nonole tincidunt aliquet. Fusce aliquam mi felis."
+    }
+  ],
+  "keyfigures": [
+    {
+      "registered": 200,
+      "successfull_exist": 100,
+      "activities": 100
+    }
+  ],
+  "pricing": [
+    {
+      "account": "free",
+      "directory_presence": true,
+      "presentation": 250,
+      "photos": 1,
+      "activities": "Illimité",
+      "transactions": "Aucune",
+      "excedding_pkg": "Aucune",
+      "statistical": "Nombre de visite",
+      "review_reply": false,
+      "synchronize": false,
+      "administrator": 1,
+      "support": 7
+    },
+    {
+      "account": 49,
+      "directory_presence": true,
+      "presentation": 1000,
+      "photos": 10,
+      "activities": "Illimité",
+      "transactions": 40,
+      "excedding_pkg": 20,
+      "statistical": "Nombre de visite, Nombre d’apparition, dans les groupes, Nombre d’enregistrement, Nombre d’abonnés, Nombre de like",
+      "review_reply": true,
+      "synchronize": true,
+      "administrator": 2,
+      "support": 24
+    },
+    {
+      "account": 99,
+      "directory_presence": true,
+      "presentation": "Illimité",
+      "photos": "Illimité",
+      "activities": "Illimité",
+      "transactions": 120,
+      "excedding_pkg": 20,
+      "statistical": "Nombre de visite, Nombre d’apparition, dans les groupes, Nombre d’enregistrement, Nombre d’abonnés, Nombre de like",
+      "review_reply": true,
+      "synchronize": true,
+      "administrator": 5,
+      "support": 24
+    },
+    {
+      "account": "pro++",
+      "directory_presence": true,
+      "presentation": "Illimité",
+      "photos": "Illimité/mois",
+      "activities": "Illimité",
+      "transactions": 60,
+      "excedding_pkg": 20,
+      "statistical": "Nombre de visite, Nombre d’apparition, dans les groupes, Nombre d’enregistrement, Nombre d’abonnés, Nombre de like",
+      "review_reply": true,
+      "synchronize": true,
+      "administrator": "Illimités",
+      "support": 24
+    }
+  ]
+}

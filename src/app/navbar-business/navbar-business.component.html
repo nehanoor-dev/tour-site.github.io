@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <!-- Logo and Links Section -->
+    <a class="navbar-brand" href="#">
+      <img src="./../../assets/images/logo.png" alt="Logo">
+    </a>
+
+    <!-- Hamburger Menu for small screens -->
+    <button
+      class="navbar-toggler rounded custom-btn-toggle"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <mat-icon>menu</mat-icon> 
+    </button>
+  
+    <!-- Links and Buttons -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class=" nav-link text-white" routerLink="/" routerLinkActive="active">Pour vous</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link-custom nav-link text-white" routerLink="/business" routerLinkActive="active">Pour votre entreprise</a>
+        </li>
+      </ul>
+
+      <!-- Buttons (Hidden on small screens) -->
+      <div class="d-none d-lg-flex">
+        <button class="btn-yellow-light me-2">Connexion</button>
+        <button class="btn-yellow">S'inscrire</button>
+      </div>
+
+      <!-- Links for small screens -->
+      <div class="d-lg-none mt-3 me-auto mb-2 mb-lg-0">
+        <a class="nav-link-custom nav-link text-white" routerLink="/login">Connexion</a>
+        <a class="nav-link-custom nav-link text-white margin-top pt-3" routerLink="/signup">S'inscrire</a>
+      </div>
+    </div>
+  </div>
+</nav>

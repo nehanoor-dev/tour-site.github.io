@@ -1,0 +1,76 @@
+/* Styling for the navbar */
+
+ .navbar {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242552;    ;
+    padding: 1rem;
+    color: white;
+  }
+  .navbar-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar-logo img {
+    height: 40px;
+  }
+
+  .navbar-logo a {
+    color: #FFFFFE;
+    text-decoration: none;
+    margin-left: 3rem;
+    font-size: 1rem;
+  }
+  
+  .navbar-logo  a:hover {
+    color: #ccc;
+  }
+  
+  .navbar-buttons button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  
+  .btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.8;
+  } 
+
+  .btn-nav {
+    background-color: #48a4a3;
+    color: white;
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 20px;
+  }
+
+  .btn-nav-light {
+    background-color: transparent;
+    color: #48a4a3;
+    border: 1px solid #48a4a3;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 20px;
+  }
+  .nav-link-custom.active {
+    color: #E2074c !important;
+  }
+  .custom-btn-toggle {
+    background-color: transparent; 
+    color: white;            
+    border: none;            
+    border-radius: 50% !important;      
+    padding: 10px 15px;      
+    transition: background-color 0.3s; 
+  }
+  
+  .custom-btn-toggle:hover {
+    color: rgb(210, 201, 107);               
+  }

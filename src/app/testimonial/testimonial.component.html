@@ -1,0 +1,62 @@
+<div
+  class=" testimonial d-flex flex-column align-items-center justify-content-center"
+>
+  <h2 class="text-center font padding-top fw-bold">
+    Ce que disent déjà les Wewiinseur
+  </h2>
+  <p class="text-center fw-light font">
+    Ces retours on étaient récoltés avec nos utilisateurs par mails ou sur
+    nos<br />
+    comptes réseaux sociaux. N’hésitez pas à nous écrire.
+  </p>
+
+  <!-- Wrapper for buttons and testimonial cards -->
+  <div
+    class="d-flex align-items-center justify-content-between padding"
+    style="width: 100%"
+  >
+    <!-- Previous Button -->
+    <div class="cursor-pointer" (click)="previous()" style="flex-shrink: 0">
+      <img src="./../../assets/images/pre-icon.png" />
+    </div>
+
+    <!-- Testimonial Cards (centered) -->
+    <div class="container row justify-content-center">
+      <div
+        *ngFor="let testimonial of visibleTestimonial"
+        class="mt-10 pt-10 col-md-3 col-lg-4 col-mb-3 col-sm-3 col-xm-4"
+      >
+        <div
+          class="mt-10 pt-10 card position-relative d-flex align-items-center justify-content-center custom-card"
+          style="border: 1px solid #347a79; border-radius: 15px; padding: 15px"
+        >
+          <img
+            [src]="testimonial.image"
+            class="img-fluid position-absolute"
+            style="top: -25px; right: -10px; height: auto; z-index: 999"
+          />
+          <div class="d-flex flex-column padding-top" style="height: 200px;">
+            <img
+              src="./../../assets/images/stars.png"
+              height="20px"
+              width="100px"
+            />
+            <p class="font">"{{ testimonial.message }}"</p>
+            <h6 class="font fw-bold">{{ testimonial.name }}</h6>
+            <p class="font">{{ testimonial.date }}</p>
+            <img
+              [src]="testimonial.image2"
+              class="img-fluid position-absolute"
+              style="top: 75%; right: -5px; height: auto; z-index: 999"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Button -->
+    <div class="cursor-pointer" (click)="next()" style="flex-shrink: 0">
+      <img src="./../../assets/images/next-icon.png" />
+    </div>
+  </div>
+</div>

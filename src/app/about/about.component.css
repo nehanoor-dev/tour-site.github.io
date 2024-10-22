@@ -1,0 +1,40 @@
+.main {
+    background-color: #FAFAFA;
+    height: auto;
+    overflow-x: hidden !important;
+}
+
+.left, .right {
+    position: relative; 
+}
+
+
+.left-text, .right-text {
+    position: absolute;
+    top: 70%; 
+    left: 10%; 
+    right: 10%; 
+    transform: translateY(-50%);
+    color: white;
+    padding: 20px;
+    border-radius: 5px; 
+    width: 300px;
+}
+
+/* Responsive adjustments */
+@media (max-width < 700px ) {
+    .left-text, .right-text {
+        left: 10%; 
+        right: 5%; 
+        top: 70%;
+    }
+}
+@media (max-width > 1000px) {
+
+    .left-text, .right-text {
+        left: 20%; 
+        right: 5%; 
+        top: 70%;
+    }
+}
+

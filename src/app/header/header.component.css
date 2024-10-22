@@ -1,0 +1,36 @@
+.header-container {
+    position: relative;
+    height: 80vh; /* Full viewport height */
+    background-image: url('https://s3-alpha-sig.figma.com/img/ad94/4684/544ddae5003970f75c0fd6d264ea7023?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=N7DlC6NAZcKGKmiSamVR7p0PZXbni9k~6~2bBUq545MhwUK~N2U0qddVKHU5j0c6OWCqlaWJPmIHWNcKUt1COV160kjzsBR3HFnEaXARgnMDRAVp9PjYozje~mB6OZHAdWzF74gG28UVoVUjKes0W8xFgCVSf08ct2mBQ~u8KaivbFBWygvrbhHoCT-eplJ67Kj4LH58SBxR2erejXJBxaHVAg8boTObzYL7TjNEBr8tmyYHLcezIveuxVKUkA1-0AggpxUo9I8x23QY6nxX~rM43olj3lTuUlteqLEtY~DLOJYVZs6S8IgMNttJIsIKogOdbhm5IexKGbm57Gmw~g__'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+  }
+  .overlay {
+    position: absolute;
+    top: 30;
+    left: 0;
+    height: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+  }
+  
+  .container {
+    z-index: 2; /* Ensures content is above the overlay */
+  }
+  .btn-custom {
+    border-radius: 20px;
+    border: 1px solid transparent;
+  }
+
+  .btn-custom-white {
+    color: #E2074C;
+    background: white;
+    padding: 10px 30px;
+    margin-top: 10px;
+  }
+  margin {
+    margin: 20px !important;
+    margin-right: 20px;
+  }
+  

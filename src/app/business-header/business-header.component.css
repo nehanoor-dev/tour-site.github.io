@@ -1,0 +1,19 @@
+.background-container {
+    background-image: url('./../../assets/images/business-header.png');
+    background-size: cover; 
+    background-position: center; 
+    height: 114vh; 
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow-x: hidden !important;
+  }
+  @media (max-width: 768px) {
+    .background-container {
+      background-image: url('./../../assets/images/header-small2.png');
+      background-size: cover; 
+      background-position: center; 
+      height: 70vh; 
+      width: auto;
+    }
+  } 
+  

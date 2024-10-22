@@ -1,0 +1,14 @@
+.faq-section {
+   background-color: #FAFAFA;
+   height: 100vh;
+   overflow-x: hidden !important;
+}
+.faqs-inner {
+  max-width: 710px;
+  margin: 0 auto;
+  padding: 20px;
+}
+hr {
+  border: none;
+  border-bottom: 2px solid #dee2e6;
+}

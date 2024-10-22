@@ -1,0 +1,166 @@
+<div class="pricing container-fluid">
+    <div class="padding-custom">
+        <h3 class="margin-top blue-text fw-bold text-center">Friendly pricing plans</h3>
+        <p class="blue-text text-center">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam.</p>
+    </div>
+    <div class="row">
+      <div class="d-flex justify-content-start">
+        <!-- Package items card -->
+        <div class="d-flex flex-column align-items-center d-none d-lg-block">
+          <ul style="padding-top: 190px">
+            <li class="list-unstyled fw-bold margin-top blue-text">Présence dans l’annuaire</li>
+            <li class="list-unstyled fw-bold margin-top blue-text">Présentation</li>
+            <li class="list-unstyled fw-bold margin-top blue-text">Nombre de photo</li>
+            <li class="list-unstyled fw-bold margin-top blue-text">Nombre d’activité</li>
+            <li class="list-unstyled fw-bold margin-top blue-text">Nombre de transaction</li>
+            <li class="list-unstyled fw-bold margin-top blue-text">Dépassement forfait</li>
+            <li class="list-unstyled padding-custom fw-bold margin-top blue-text padding-top">Statistique</li>
+            <li class="list-unstyled fw-bold margin-top blue-text">Répondre aux avis</li>
+            <li class="list-unstyled fw-bold margin-top blue-text">Synchronisez</li>
+            <li class="list-unstyled fw-bold margin-top blue-text">Nombre d’administrateur</li>
+            <li class="list-unstyled fw-bold margin-top blue-text">Support client</li>
+          </ul>
+        </div>
+  
+        <!-- Free package card -->
+
+        <div class="card-free" style="width: 270px;">
+          <div class="justify-content font-family">
+            <h5 class="text-center fw-bold margin-top blue-text">$ {{ package1.account }}</h5>
+            <p class="text-center fw-bold margin-top blue-text text-nowrap">Possibilité de changer de forfait<br />à tout moment</p>
+            <div class="d-flex justify-content-center">
+              <button class="btn-free text-center mt-3 d-flex align-items-center">
+                Upgrade to Lite
+                <mat-icon class="ml-1 mt-1">arrow_forward</mat-icon>
+              </button>
+            </div>
+            <ul>
+              <li class="list-unstyled margin-top text-center" *ngIf="package1.directory_presence">
+                <img src="./../../assets/images/checkbox.png" />
+              </li>
+              <li class="list-unstyled margin-top text-center border-white blue-text">Moins de {{ package1.presentation }} caractères</li>
+              <li class="list-unstyled margin-top text-center border-white blue-text">{{ package1.photos }} photos</li>
+              <li class="list-unstyled margin-top text-center border-white blue-text">{{ package1.activities }}</li>
+              <li class="list-unstyled margin-top text-center border-white blue-text">{{ package1.transactions }}</li>
+              <li class="list-unstyled margin-top text-center border-white blue-text">{{ package1.excedding_pkg }}</li>
+              <li class="list-unstyled margin-top padding-custom fw-bold text-center border-white blue-text padding-top text-nowrap"
+              >{{ package1.statistical }}</li>
+              <li class="list-unstyled margin-top text-center" *ngIf="!package1.review_reply">
+                <img src="./../../assets/images/cross.png" />
+              </li>
+              <li class="list-unstyled margin-top text-center" *ngIf="!package1.Synchronise">
+                <img src="./../../assets/images/cross.png" />
+              </li>
+              <li class="list-unstyled margin-top text-center border-white blue-text">{{ package1.administrator }}</li>
+              <li class="list-unstyled margin-top text-center blue-text">Réponse dans<br />les {{ package1.support }} jours ouvrées</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Pro Package card -->
+        <div class="card-pro" style="width: 250px;">
+            <div class="justify-content font-family">
+              <h5 class="text-center fw-bold margin-top blue-text">$ {{ package2.account }}</h5>
+              <p class="text-center fw-bold margin-top blue-text">par mois<br/>
+                + 5% par transaction</p>
+              <div class="d-flex justify-content-center">
+                <button class="pink-btn text-center mt-3 d-flex align-items-center">
+                  Upgrade to Pro
+                <mat-icon class="ml-1 mt-1">arrow_forward</mat-icon>
+                </button>
+              </div>
+              <ul>
+                <li class="list-unstyled margin-top text-center" *ngIf="package1.directory_presence">
+                  <img src="./../../assets/images/checkbox.png" />
+                </li>
+                <li class="list-unstyled margin-top text-center border-white blue-text text-nowrap">Moins de {{ package2.presentation }} caractères</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package2.photos }} photos</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package2.activities }}</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package2.transactions }}/mois</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text text-nowrap">{{ package2.excedding_pkg }}% par transaction supp.</li>
+                <li class="list-unstyled padding-top-less fw-bold border-white blue-text" [innerHTML]="formatStatistical(package2.statistical)"></li>
+                <li class="list-unstyled margin-top text-center" *ngIf="!package1.review_reply">
+                  <img src="./../../assets/images/checkbox.png" />
+                </li>
+                <li class="list-unstyled margin-top text-center" *ngIf="!package1.Synchronise">
+                  <img src="./../../assets/images/checkbox.png" />
+                </li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package2.administrator }}</li>
+                <li class="list-unstyled margin-top text-center blue-text">Réponse dans<br />les {{ package2.support }} jours ouvrées</li>
+              </ul>
+            </div>
+          </div>
+
+        <!-- Plus Package Card -->
+
+          <div class="card-pro" style="width: 250px;">
+            <div class="justify-content font-family">
+              <h5 class="text-center fw-bold margin-top blue-text">$ {{ package3.account }}</h5>
+              <p class="text-center fw-bold margin-top blue-text">par mois<br>
+                + 5% par transaction</p>
+              <div class="d-flex justify-content-center">
+                <button class="pink-btn text-center mt-3 d-flex align-items-center">
+                  Upgrade to Plus
+                  <mat-icon class="ml-1 mt-1">arrow_forward</mat-icon>
+                </button>
+              </div>
+              <ul>
+                <li class="list-unstyled margin-top text-center" *ngIf="package1.directory_presence">
+                  <img src="./../../assets/images/checkbox.png" />
+                </li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package3.presentation }}</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package3.photos }} photos</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package3.activities }}</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package3.transactions }}/Moins</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text text-nowrap">{{ package3.excedding_pkg }}% par transaction supp.</li>
+                <li class="list-unstyled padding-top-less fw-bold border-white blue-text" [innerHTML]="formatStatistical(package3.statistical)"></li>
+                <li class="list-unstyled margin-top text-center" *ngIf="!package1.review_reply">
+                  <img src="./../../assets/images/checkbox.png" />
+                </li>
+                <li class="list-unstyled margin-top text-center" *ngIf="!package1.Synchronise">
+                  <img src="./../../assets/images/checkbox.png" />
+                </li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package3.administrator }}</li>
+                <li class="list-unstyled margin-top text-center blue-text">Réponse dans<br />les {{ package3.support }} jours ouvrées</li>
+              </ul>
+            </div>
+          </div>
+
+         <!-- Pro++ Package Card -->
+
+          <div class="card-pro" style="width: 250px;">
+            <div class="justify-content font-family">
+              <h5 class="text-center fw-bold margin-top blue-text">{{ package4.account }}</h5>
+              <p class="text-center fw-bold margin-top blue-text">Contactez<br>
+                nos équipes</p>
+              <div class="d-flex justify-content-center">
+                <button class="btn-pro-plus text-center mt-3 d-flex align-items-center">
+                  <mat-icon class="ml-1 mt-1">phone</mat-icon>
+                  Contactez nous
+                </button>
+              </div>
+              <ul>
+                <li class="list-unstyled margin-top text-center" *ngIf="package1.directory_presence">
+                  <img src="./../../assets/images/checkbox.png" />
+                </li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package4.presentation }}</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package4.photos }} photos</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package4.activities }}</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package4.transactions }}/mois</li>
+                <li class="list-unstyled margin-top text-center border-white blue-text text-nowrap">{{ package4.excedding_pkg }}% par transaction supp.</li>
+                <li class="list-unstyled padding-top-less fw-bold border-white blue-text" [innerHTML]="formatStatistical(package4.statistical)"></li>
+                <li class="list-unstyled margin-top text-center" *ngIf="!package1.review_reply">
+                  <img src="./../../assets/images/checkbox.png" />
+                </li>
+                <li class="list-unstyled margin-top text-center" *ngIf="!package1.Synchronise">
+                  <img src="./../../assets/images/checkbox.png" />
+                </li>
+                <li class="list-unstyled margin-top text-center border-white blue-text">{{ package4.administrator }}</li>
+                <li class="list-unstyled margin-top text-center blue-text">Réponse dans<br />les {{ package4.support }} jours ouvrées</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  

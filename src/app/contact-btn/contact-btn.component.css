@@ -1,0 +1,7 @@
+.contact-btn {
+     background-image: url('./../../assets/images/contact.png');
+     background-size: cover;
+     background-position: center;
+      height: 300px;
+      overflow-x: hidden !important;
+}
